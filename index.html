@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pink Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Game Mode Selection -->
+    <div class="game-mode-selection">
+      <h3>Select Game Mode:</h3>
+      <div class="mode-options">
+        <button id="modeHuman" class="mode-button selected">
+          Play vs Player
+        </button>
+        <button id="modeAI" class="mode-button">Play vs AI</button>
+      </div>
+    </div>
+
+    <div class="player-info">
+      <label for="player1">Player 1 (X): </label>
+      <input type="text" id="player1" placeholder="Enter name for Player 1" />
+      <label for="player2">Player 2 (O): </label>
+      <input type="text" id="player2" placeholder="Enter name for Player 2" />
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div class="scoreboard">
+      <h3>Scoreboard</h3>
+      <p id="score1">Player 1: 0</p>
+      <p id="score2">Player 2: 0</p>
+    </div>
+
+    <!-- The rest of your game HTML goes here -->
+
+    <div class="game">
+      <div class="grid">
+        <div class="cell" onclick="nextMove(this)"></div>
+        <div class="cell" onclick="nextMove(this)"></div>
+        <div class="cell" onclick="nextMove(this)"></div>
+        <div class="cell" onclick="nextMove(this)"></div>
+        <div class="cell" onclick="nextMove(this)"></div>
+        <div class="cell" onclick="nextMove(this)"></div>
+        <div class="cell" onclick="nextMove(this)"></div>
+        <div class="cell" onclick="nextMove(this)"></div>
+        <div class="cell" onclick="nextMove(this)"></div>
+      </div>
+      <button onclick="resetGame()">Reset Game</button>
+    </div>
+
+    <!-- Modal for displaying messages -->
+    <div id="modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-text"></p>
+      </div>
+    </div>
+    <div class="status">Game in progress...</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
