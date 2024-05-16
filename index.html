@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pink Tic-Tac-Toe</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   </head>
   <body>
+    <canvas id="backgroundCanvas"></canvas>
+
     <!-- Game Mode Selection -->
     <div class="game-mode-selection">
       <h3>Select Game Mode:</h3>
@@ -22,7 +29,12 @@
       <label for="player1">Player 1 (X): </label>
       <input type="text" id="player1" placeholder="Enter name for Player 1" />
       <label for="player2">Player 2 (O): </label>
-      <input type="text" id="player2" placeholder="Enter name for Player 2" />
+      <input
+        type="text"
+        id="player2"
+        placeholder="Enter name for Player 2"
+        disabled
+      />
       <button onclick="startGame()">Start Game</button>
     </div>
 
@@ -31,8 +43,6 @@
       <p id="score1">Player 1: 0</p>
       <p id="score2">Player 2: 0</p>
     </div>
-
-    <!-- The rest of your game HTML goes here -->
 
     <div class="game">
       <div class="grid">
